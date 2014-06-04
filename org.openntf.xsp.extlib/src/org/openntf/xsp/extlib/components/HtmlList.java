@@ -17,13 +17,17 @@ public class HtmlList extends AbstractHtmlTag {
 		return FAMILY;
 	}
 
+	public boolean getOrdered() {
+		return isOrdered();
+	}
+
 	public boolean isOrdered() {
 		if (ordered != null) {
 			return ordered;
 		} else {
-			ValueBinding vb = getValueBinding("order");
+			ValueBinding vb = getValueBinding("ordered");
 			if (vb != null && vb.getValue(FacesContext.getCurrentInstance()) != null) {
-				return (Boolean) vb.getValue(FacesContext.getCurrentInstance());
+				return (Boolean) vb.getValue(getFacesContext());
 			} else {
 				return false;
 			}

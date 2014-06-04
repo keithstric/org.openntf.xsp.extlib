@@ -38,4 +38,20 @@
 			</designer-extension>
 		</component-extension>
 	</component>
+	<component id="ComputedText">
+		<description>Same as a Computed Field component or XspOutputText with the exception that this component honors the disable tag name and will only output the value</description>
+		<display-name>Computed Text</display-name>
+		<component-type>org.openntf.xsp.ComputedText</component-type>
+		<component-class>org.openntf.xsp.extlib.components.ComputedText</component-class>
+		<component-extension>
+			<component-family>org.openntf.xsp.extlib</component-family>
+			<tag-name>computedText</tag-name>
+			<base-component-type>com.ibm.xsp.OutputText</base-component-type>
+			<renderer-type>org.openntf.xsp.ComputedText</renderer-type>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>OpenNTF Starter Kit</category>
+			</designer-extension>
+		</component-extension>
+	</component>
 </faces-config>
